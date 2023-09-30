@@ -15,4 +15,13 @@ printf("%d",*(p+3));// when ever we increment with the pointer integer value
 return 0;l           // Should be stored in array otherwise the output will be diferent  
 }
 Name of the array can be used as pointer of the first element of an  array.
+ WE can use array but the address of the pointer can't change 
+suppose ex:- int main(){
+             int a[]={11,23,36,5,6}
+            printf("%d",a++);
+       // so here the a++ is to change tha address of pointer but address can't change if i return is the output is zero
+      so we can use here a+1; its for accessing 
+      a++ is assiging 
+      return 0;
+             }
  
