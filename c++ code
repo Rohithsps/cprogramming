@@ -1,0 +1,64 @@
+comparing two strings?
+#include <iostream>
+#include <string>
+
+#include <cctype>// Include the cctype library for character case conversion
+using namespace std;
+int main() {
+    std::string k1, k2;
+      
+    cout << "Enter your first name: ";
+    getline(std::cin, k1);
+    cout << "Enter the second name: ";
+    getline(std::cin, k2);
+    
+    // Convert both strings to lowercase for case-insensitive comparison
+    for (char &c : k1) {
+        c = toupper(c);
+    }
+    
+    for (char &c : k2) {
+        c = toupper(c);
+        
+    }
+    cout<<"after convert to uppercases:"<< "k1="<<k1<<";k2="<<k2<<endl;
+
+    if (k1 == k2) {
+        cout << "Both the strings are the same." << std::endl;
+    } else {
+        cout << k1 << " and " << k2 << " are not equal." << std::endl;
+    }
+
+    return 0;
+}
+COMPARING TWO STRINGS USING POINTERS?
+#include <iostream>
+using namespace std;
+
+
+// Method to compare two string
+// using pointer
+bool compare(char *str1, char *str2)
+{
+	while (*str1 == *str2)
+	{
+		if (*str1 == '\0' && *str2 == '\0')
+			return true;
+		str1++;
+		str2++;
+	}	
+
+	return false;
+}
+
+int main()
+{
+	// Declare and Initialize two strings
+	char str1[] = "geeks";
+	char str2[] = "geeks";
+
+	if (compare(str1, str2) == 1)
+		cout << str1 << " " << str2 << " are Equal";
+	else
+		cout << str1 << " " << str2 << " are not Equal";
+}
