@@ -62,3 +62,42 @@ int main()
 	else
 		cout << str1 << " " << str2 << " are not Equal";
 }
+
+**PLACEMENT QUESTION?
+A number is said to be 248 number if the count of 2 is equal to the count of 4 and the count of 4 is equal to the count of 8. 
+The count of 2 should be at least 1. Given number N.your the task is to find the interval[1,n].since the answer can be too long .
+print it modulo 1000000007?
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+const int MOD = 1000000007;
+
+int count248Numbers(int N) {
+    int count = 0;
+    for (int num = 1; num <= N; ++num) {
+        string numStr = to_string(num);
+        int count2 = 0, count4 = 0, count8 = 0;
+        for (char digit : numStr) {
+            if (digit == '2') count2++;
+            else if (digit == '4') count4++;
+            else if (digit == '8') count8++;
+        }
+        if (count2 >= 1 && count2 == count4 && count4 == count8) {
+            count++;
+            count %= MOD;
+        }
+    }
+    return count;
+}
+
+int main() {
+    int N;
+    cout<<"enter the number"<<endl;    
+    cin >> N;
+    int result = count248Numbers(N);
+    cout << result << endl;
+ return 0;
+}
+
