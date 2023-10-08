@@ -101,3 +101,38 @@ int main() {
  return 0;
 }
 
+4)FIND THE EVEN AND ODD NUMBER AND FIND THE LARGEST EVEN AND ODD NUMBER IN GIVEN LIST ?
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <climits> here the library uses for constant.like INT_MIN, which represents the (mini) and (max) value for an int
+using namespace std;
+
+int main() {
+    vector<int> numbers = {2, 7, 12, 9, 4, 15, 8, 6};
+    int largestEven = INT_MIN; 
+    int largestOdd = INT_MIN;  
+    cout << "Even numbers: ";
+    for (int num : numbers) {
+        if (num % 2 == 0) {
+            cout << num << " ";
+            largestEven = max(largestEven, num); 
+        }
+    }
+
+    cout << "\nOdd numbers: ";
+    for (int num : numbers) {
+        if (num % 2 != 0) {
+            cout << num << " ";
+            largestOdd = max(largestOdd, num); 
+        }
+    }
+
+    cout << "\nLargest even number: " << (largestEven != INT_MIN ? to_string(largestEven) : "None") << endl;
+    cout << "Largest odd number: " << (largestOdd != INT_MIN ? to_string(largestOdd) : "None") << endl;
+
+    return 0;
+}
+
+
