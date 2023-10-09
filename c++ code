@@ -106,7 +106,8 @@ int main() {
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <climits> here the library uses for constant.like INT_MIN, which represents the (mini) and (max) value for an int
+#include <climit> here the library uses for constant.like INT_MIN, which represents the (mini) and (max) value for an int
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -134,5 +135,7 @@ int main() {
 
     return 0;
 }
+
+
 
 
