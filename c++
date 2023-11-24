@@ -36,4 +36,11 @@ strncmp-Compares first n characters of two strings
 strchr-Finds first occurrence of a given character in a string
 strrchr-Finds last occurrence of a given character in a string
 strstr-Finds first occurrence of a given string in another string
+
+OOPS TOPIC:
+Classes and Objects: 
+class:- Its creates object and defines attributes and method to all the object that type 
+Object:- It creates  based on a class and represent a specfic instance of that class  and multiple object can create 
+         in same class.
+
  
